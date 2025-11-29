@@ -7,8 +7,8 @@ public class Producto {
     private String descripcion;
     private double precio;
     private int stock;
-    private int idCategoria;  // ← NUEVO atributo
-    private boolean activo;   // ← NUEVO atributo
+    private int idCategoria;
+    private boolean activo;
     
     // Constructor vacío
     public Producto() {
@@ -45,11 +45,11 @@ public class Producto {
         return stock;
     }
     
-    public int getIdCategoria() {  // ← NUEVO método
+    public int getIdCategoria() {
         return idCategoria;
     }
     
-    public boolean isActivo() {    // ← NUEVO método
+    public boolean isActivo() {
         return activo;
     }
     
@@ -74,11 +74,17 @@ public class Producto {
         this.stock = stock;
     }
     
-    public void setIdCategoria(int idCategoria) {  // ← NUEVO método
+    public void setIdCategoria(int idCategoria) {
         this.idCategoria = idCategoria;
     }
     
-    public void setActivo(boolean activo) {        // ← NUEVO método
+    public void setActivo(boolean activo) {
         this.activo = activo;
+    }
+    
+    @Override
+    public String toString() {
+        return "Producto [id=" + idProducto + ", nombre=" + nombre + ", precio=" + precio + 
+               ", stock=" + stock + ", idCategoria=" + idCategoria + "]";
     }
 }

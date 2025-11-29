@@ -19,21 +19,20 @@ public class MainApp {
             "Manzana fresca cultivada organicamente", 
             2.50, 
             100, 
-            1
+            1  // id_categoria como int
         );
         
-        // Intentar insertar el producto (comentado por ahora)
-        System.out.println("3. Intentando insertar producto...");
-        // productoDAO.insertarProducto(productoPrueba);
-        
         // Obtener todos los productos
-        System.out.println("4. Obteniendo lista de productos...");
+        System.out.println("3. Obteniendo lista de productos...");
         var productos = productoDAO.obtenerTodosProductos();
         System.out.println("   Productos encontrados: " + productos.size());
         
+        // Mostrar los productos encontrados
+        for (Producto producto : productos) {
+            System.out.println("   - " + producto.getNombre() + ": $" + producto.getPrecio() + 
+                             " (Stock: " + producto.getStock() + ", Categoria ID: " + producto.getIdCategoria() + ")");
+        }
+        
         System.out.println("PRUEBA COMPLETADA");
-        System.out.println("NOTA: Para pruebas reales, necesitamos:");
-        System.out.println("   - Base de datos MySQL creada");
-        System.out.println("   - Driver MySQL agregado al proyecto");
     }
 }

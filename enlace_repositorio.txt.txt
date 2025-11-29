@@ -1,0 +1,15 @@
+ENLACE AL REPOSITORIO GITHUB:
+https://github.com/johanna1290aguirre-web/EcommerceSaludable
+
+COMMIT REALIZADO:
+- ID: 6a5c8ce
+- Mensaje: "Initial commit: Estructura base del proyecto"
+
+ARCHIVOS SUBIDOS:
+? Estructura completa de paquetes Java
+? Clases del modelo (Producto, Usuario)
+? Clases DAO con operaciones CRUD
+? Conexión JDBC configurada
+? Script de base de datos MySQL
+
+CONTROL DE VERSIONES IMPLEMENTADO ?

@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "MainApp",
+            "request": "launch",
+            "mainClass": "com.ecommercesaludable.main.MainApp",
+            "projectName": "EcommerceSaludable_5c53a0f5"
+        },
+        {
             "name": "CMake: CMake Script",
             "type": "cmake",
             "request": "launch",
