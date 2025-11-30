@@ -10,7 +10,6 @@ import java.util.List;
 
 public class ProductoDAO {
     
-    // Método para OBTENER todos los productos
     public List<Producto> obtenerTodosProductos() {
         List<Producto> productos = new ArrayList<>();
         String sql = "SELECT * FROM productos WHERE activo = 1";
@@ -39,7 +38,6 @@ public class ProductoDAO {
         return productos;
     }
     
-    // Método para BUSCAR productos por nombre
     public List<Producto> buscarProductos(String nombre) {
         List<Producto> productos = new ArrayList<>();
         String sql = "SELECT * FROM productos WHERE nombre LIKE ? AND activo = 1";
@@ -68,27 +66,5 @@ public class ProductoDAO {
         }
         
         return productos;
-    }
-    
-    // Método para INSERTAR un nuevo producto
-    public void insertarProducto(Producto producto) {
-        String sql = "INSERT INTO productos (nombre, descripcion, precio, stock, id_categoria) VALUES (?, ?, ?, ?, ?)";
-        
-        try (Connection connection = DatabaseConnection.getConnection();
-             PreparedStatement statement = connection.prepareStatement(sql)) {
-            
-            statement.setString(1, producto.getNombre());
-            statement.setString(2, producto.getDescripcion());
-            statement.setDouble(3, producto.getPrecio());
-            statement.setInt(4, producto.getStock());
-            statement.setInt(5, producto.getIdCategoria());
-            
-            statement.executeUpdate();
-            System.out.println("✅ Producto insertado correctamente");
-            
-        } catch (SQLException e) {
-            System.out.println("❌ Error al insertar producto");
-            e.printStackTrace();
-        }
     }
 }
