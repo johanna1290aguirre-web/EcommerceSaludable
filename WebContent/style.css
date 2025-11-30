@@ -1,0 +1,554 @@
+/* Estilos Ecommerce Saludable - Productos Reales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', 'Arial', sans-serif;
+    background-color: #0A0A0A;
+    color: #FFFFFF;
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(135deg, #E02B59 0%, #C01A4A 100%);
+    padding: 1rem 0;
+    box-shadow: 0 4px 12px rgba(224, 43, 89, 0.3);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+h1 i {
+    color: #FFD700;
+    font-size: 2.5rem;
+}
+
+/* BARRA DE BÚSQUEDA */
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    padding: 0.5rem;
+    margin: 0 1.5rem;
+}
+
+.search-bar input {
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    width: 250px;
+    outline: none;
+}
+
+.search-bar input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.search-btn {
+    background: #E02B59;
+    border: none;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-btn:hover {
+    background: #C01A4A;
+}
+
+/* NAVEGACIÓN */
+nav {
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+nav a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid #FFD700;
+}
+
+/* BOTÓN LOGIN */
+.login-btn {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-right: 1rem;
+}
+
+.login-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #E02B59;
+}
+
+/* HEADER ACTIONS */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* ICONO CARRITO */
+.cart-icon {
+    position: relative;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #FFD700;
+    color: #000;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* HERO SECTION */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%2327ae60" width="1200" height="600"/><circle fill="%232c3e50" cx="400" cy="300" r="100" opacity="0.3"/><circle fill="%233498db" cx="800" cy="200" r="150" opacity="0.2"/></svg>');
+    background-size: cover;
+    background-position: center;
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #FFFFFF;
+}
+
+.hero-content p {
+    font-size: 1.4rem;
+    color: #CCCCCC;
+    margin-bottom: 2rem;
+}
+
+/* BOTONES DEL HERO */
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-button {
+    background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+    color: #000;
+    border: none;
+    padding: 1.5rem 3rem;
+    border-radius: 50px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(39, 174, 96, 0.4);
+}
+
+.secondary-button {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 1.2rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.secondary-button:hover {
+    background: white;
+    color: #E02B59;
+    transform: translateY(-3px);
+}
+
+/* PRODUCTOS */
+.products {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.products h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.products h2 i {
+    color: #FFD700;
+}
+
+/* GRID DE PRODUCTOS */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.producto {
+    background: linear-gradient(145deg, #1A1A1A 0%, #2D2D2D 100%);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+    transition: all 0.3s ease;
+}
+
+.producto:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(224, 43, 89, 0.25);
+}
+
+.product-icon {
+    font-size: 3rem;
+    margin-bottom: 1.2rem;
+}
+
+.product-icon i {
+    background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.producto h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    color: #FFFFFF;
+}
+
+.description {
+    color: #CCCCCC;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.price {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #FFD700;
+    margin: 1rem 0;
+}
+
+.shipping {
+    color: #27ae60;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+button {
+    background: linear-gradient(135deg, #E02B59 0%, #C01A4A 100%);
+    color: #FFFFFF;
+    border: none;
+    padding: 1rem 1.8rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    justify-content: center;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(224, 43, 89, 0.6);
+}
+
+/* BOTÓN VER MÁS */
+.view-more-container {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.view-more-btn {
+    background: linear-gradient(135deg, #E02B59 0%, #C01A4A 100%);
+    color: white;
+    padding: 1.2rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.view-more-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(224, 43, 89, 0.6);
+}
+
+/* FOOTER */
+footer {
+    background: linear-gradient(135deg, #000000 0%, #1A1A1A 100%);
+    padding: 3rem 2rem;
+    border-top: 3px solid #E02B59;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.social-icons {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.social-icons a {
+    color: #FFFFFF;
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #E02B59;
+    transform: translateY(-3px);
+}
+
+/* ESTILOS ESPECÍFICOS PARA CATÁLOGO */
+/* CORRECCIÓN PARA ALINEACIÓN DE PRODUCTOS */
+.producto {
+    display: flex;
+    flex-direction: column;
+    height: auto; /* Cambiamos a altura automática */
+    min-height: 420px; /* Altura mínima para consistencia */
+}
+
+.producto h3 {
+    min-height: 3rem; /* Altura fija para títulos de 2 líneas */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.description {
+    min-height: 2.5rem; /* Altura fija para descripciones */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Hacemos que el botón siempre esté en la parte inferior */
+.producto button {
+    margin-top: auto; /* Empuja el botón hacia abajo */
+}
+
+/* Aseguramos que el precio tenga altura consistente */
+.price {
+    min-height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Aseguramos que el envío tenga altura consistente */
+.shipping {
+    min-height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* ESTILOS ESPECÍFICOS PARA CATÁLOGO */
+.catalog-hero {
+    background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+    padding: 3rem 2rem;
+    text-align: center;
+    color: white;
+}
+
+.catalog-hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.catalog-hero-content p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* FILTROS */
+.catalog-filters {
+    background: #1a1a1a;
+    padding: 1.5rem 2rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+    border-radius: 10px;
+}
+
+.filters-container {
+    display: flex;
+    gap: 1.5rem;
+    align-items: end;
+    flex-wrap: wrap;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.filter-group label {
+    font-weight: 600;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.filter-group select {
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 2px solid #333;
+    background: #2d2d2d;
+    color: white;
+    cursor: pointer;
+}
+
+.filter-group select:focus {
+    border-color: #E02B59;
+    outline: none;
+}
+
+.filter-btn {
+    background: linear-gradient(135deg, #E02B59 0%, #C01A4A 100%);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(224, 43, 89, 0.4);
+}
+
+/* CONTENEDOR DE PRODUCTOS DEL CATÁLOGO */
+.catalog-products {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* RESPONSIVE PARA FILTROS */
+@media (max-width: 768px) {
+    .filters-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .filter-group {
+        width: 100%;
+    }
+    
+    .filter-btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .catalog-hero-content h2 {
+        font-size: 2rem;
+    }
+}

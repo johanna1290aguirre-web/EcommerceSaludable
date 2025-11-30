@@ -1,3 +1,13 @@
 {
-    "java.debug.settings.onBuildFailureProceed": true
+    "java.debug.settings.onBuildFailureProceed": true,
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.project.sourcePaths": [
+        "src",
+        "WebContent"
+    ],
+    "tomcat.work.dir": "${workspaceFolder}",
+    "java.project.referencedLibraries": [
+        "WebContent/WEB-INF/lib/*.jar",
+        "lib/*.jar"
+    ]
 }
